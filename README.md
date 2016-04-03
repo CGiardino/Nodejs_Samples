@@ -1,6 +1,6 @@
 # Nodejs_Samples
-to run the sample cmd: npm install; npm test;
-1Spec and 1Src contain Flattener.js
-2Spec and 2Src contain GCDCalculatorSpec.js
-coverage is under the coverage folder
-docs are under the out folder
+To run the sample cmd: npm install; npm test;</br>
+1Spec and 1Src contain Flattener.js</br>
+2Spec and 2Src contain GCDCalculatorSpec.js</br>
+Coverage is under the coverage folder</br>
+Docs are under the out folder</br>
