@@ -16,13 +16,13 @@ function GCDCalculator() {};
  * My method description.  Like other pieces of your comment blocks, 
  * this can span multiple lines.
  *
- * @method _getDistanceFromJson
+ * @method getDistanceFromJson
  * @param {String} path to the json file
  * @param {Array} array of integers with latitude and longitude in degrees
  * @param {Integer} distance to match in metres
  * @param {Function} callback function on the compliation of the computation, which returns an array with matched results
  */
-GCDCalculator.prototype._getDistanceFromJson = function _getDistanceFromJson(jsonPath, cord, m, callback) {
+GCDCalculator.prototype.getDistanceFromJson = function getDistanceFromJson(jsonPath, cord, m, callback) {
   var result = [];
   //check function arguments
   if (jsonPath == null || cord == null || m == null || isNaN(m) || callback == null) {
@@ -76,6 +76,7 @@ var _getDistance = function(cord1, cord2) {
     φ2 = toRadians(lat2),
     Δλ = toRadians(lon2 - lon1),
     R = 6371000; // gives d in metres
+
   var d = Math.acos(Math.sin(φ1) * Math.sin(φ2) + Math.cos(φ1) * Math.cos(φ2) * Math.cos(Δλ)) * R;
   return d;
 }
