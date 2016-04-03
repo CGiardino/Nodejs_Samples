@@ -1,0 +1,269 @@
+{
+    "project": {},
+    "files": {
+        "1Src/Flattener.js": {
+            "name": "1Src/Flattener.js",
+            "modules": {},
+            "classes": {
+                "Flattener": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "2Src/GCDCalculator.js": {
+            "name": "2Src/GCDCalculator.js",
+            "modules": {},
+            "classes": {
+                "GCDCalculator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Flattener": {
+            "name": "Flattener",
+            "shortname": "Flattener",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "1Src/Flattener.js",
+            "line": 3,
+            "description": "A utility that transforms an array of arbitrarily nested arrays of integers into a flat array of integers. e.g. [[1,2,[3]],4] → [1,2,3,4].",
+            "is_constructor": 1
+        },
+        "GCDCalculator": {
+            "name": "GCDCalculator",
+            "shortname": "GCDCalculator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "2Src/GCDCalculator.js",
+            "line": 7,
+            "description": "A utility that  reads the full list of customers and output the names and user ids of matching customers (within given meters), sorted by User ID (ascending).",
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "1Src/Flattener.js",
+            "line": 11,
+            "description": "Reduce arbitrarily nested arrays of integers into a flat array recursively. It removes undefined or strings values if present.",
+            "itemtype": "method",
+            "name": "flatten",
+            "params": [
+                {
+                    "name": "toFlatten",
+                    "description": "arbitrarily nested array",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "flatted array",
+                "type": "Array"
+            },
+            "class": "Flattener"
+        },
+        {
+            "file": "1Src/Flattener.js",
+            "line": 38,
+            "description": "Private concat of two arrays of integers or array and single element",
+            "itemtype": "method",
+            "name": "_concat",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "first",
+                    "description": "array of integers to concat",
+                    "type": "Array || Integer"
+                },
+                {
+                    "name": "second",
+                    "description": "array of integers to concat",
+                    "type": "Array || Integer"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Flattener"
+        },
+        {
+            "file": "1Src/Flattener.js",
+            "line": 64,
+            "description": "Private method to check if element is an integer",
+            "itemtype": "method",
+            "name": "_checkInteger",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "to check",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Flattener"
+        },
+        {
+            "file": "2Src/GCDCalculator.js",
+            "line": 15,
+            "description": "My method description.  Like other pieces of your comment blocks, \nthis can span multiple lines.",
+            "itemtype": "method",
+            "name": "getDistanceFromJson",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "to the json file",
+                    "type": "String"
+                },
+                {
+                    "name": "array",
+                    "description": "of integers with latitude and longitude in degrees",
+                    "type": "Array"
+                },
+                {
+                    "name": "distance",
+                    "description": "to match in metres",
+                    "type": "Integer"
+                },
+                {
+                    "name": "callback",
+                    "description": "function on the compliation of the computation, which returns an array with matched results",
+                    "type": "Function"
+                }
+            ],
+            "class": "GCDCalculator"
+        },
+        {
+            "file": "2Src/GCDCalculator.js",
+            "line": 57,
+            "description": "Private method _getDistance to calculate the distance between two coordinates",
+            "itemtype": "method",
+            "name": "_getDistance",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "first",
+                    "description": "cordinate array of integers with latitude and longitude in degrees",
+                    "type": "Array"
+                },
+                {
+                    "name": "second",
+                    "description": "cordinate array of integers with latitude and longitude in degrees",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "great-circle distance in metres",
+                "type": "Integer"
+            },
+            "class": "GCDCalculator"
+        },
+        {
+            "file": "2Src/GCDCalculator.js",
+            "line": 86,
+            "description": "Private method to insert integer in order (Quicksort) in the array.\nnote: faster the standard sort because applied on buffered read on line",
+            "itemtype": "method",
+            "name": "_insert",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "to insert into the array",
+                    "type": "Integer"
+                },
+                {
+                    "name": "array",
+                    "description": "to update",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "updated array",
+                "type": "Array"
+            },
+            "class": "GCDCalculator"
+        },
+        {
+            "file": "2Src/GCDCalculator.js",
+            "line": 101,
+            "description": "Private function object _userIdCompare to compare two records in customer json file",
+            "itemtype": "method",
+            "name": "_userIdCompare",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "first",
+                    "description": "cordinate array of integers with latitude and longitude in degrees",
+                    "type": "Array"
+                },
+                {
+                    "name": "second",
+                    "description": "cordinate array of integers with latitude and longitude in degrees",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "great-circle distance in metres",
+                "type": "Integer"
+            },
+            "class": "GCDCalculator"
+        },
+        {
+            "file": "2Src/GCDCalculator.js",
+            "line": 116,
+            "description": "Private method to find location of element into array (Quicksort)",
+            "itemtype": "method",
+            "name": "_locationOf",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "to locate",
+                    "type": "Integer"
+                },
+                {
+                    "name": "array",
+                    "description": "to compute the location",
+                    "type": "Array"
+                },
+                {
+                    "name": "comparer",
+                    "description": "function in array",
+                    "type": "Function"
+                },
+                {
+                    "name": "starting",
+                    "description": "index to search",
+                    "type": "Integer"
+                },
+                {
+                    "name": "ending",
+                    "description": "index to search",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "location to insert the element in array",
+                "type": "Integer"
+            },
+            "class": "GCDCalculator"
+        }
+    ],
+    "warnings": []
+}
